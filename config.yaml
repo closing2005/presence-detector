@@ -1,0 +1,16 @@
+# Camera: 0 = default webcam
+camera_index: 0
+
+# Face detection runs at this rate; presence doesn't need 30 fps
+detection_fps: 5
+
+# Hysteresis: how long a state must persist before switching
+away_after_sec: 5.0
+present_after_sec: 1.0
+
+# Actions on transitions (see src/actions.py): lock, media_pause, media_play
+on_away: [media_pause]
+on_return: [media_play]
+
+# dry_run: log actions instead of running them
+dry_run: false
